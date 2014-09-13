@@ -19,12 +19,27 @@
     self.view = view;
     NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:@"TRPieChartView" owner:self options:nil];
     
-    chartView = [nibViews objectAtIndex:1];
+    chartView = [nibViews objectAtIndex:0];
     [self.view addSubview:chartView];
+    for (UILabel *label in chartView.labels) {
+        label.layer.opacity = 0;
+    }
+    [UIView animateWithDuration:.5 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^(){
+        for (UILabel *label in chartView.labels) {
+            label.layer.opacity = 1;
+        }
+    } completion:^(BOOL info){
+        [UIView animateWithDuration:1.5 delay:1 options:UIViewAnimationOptionAllowUserInteraction animations:^(){
+            for (UILabel *label in chartView.labels) {
+                label.layer.opacity = 0;
+            }
+        } completion:nil];
+    }];
     return self;
 }
 
-- (void)setValue:(int)value forFoodGroup:(FoodGroup)foodGroup {
+- (void)setValue:(double)value forFoodGroup:(int)foodGroup {
+    value = 1.0 - value;
     UIImageView *image;
     int top = 0;
     int left = 0;
@@ -35,49 +50,48 @@
         case DAIRY: {
             image = chartView.chartDairy;
             left = chartView.chartDairy.frame.size.width * value;
-            NSLog(@"dairy updated to %d", value);
+            [UIView animateWithDuration:0.5 animations:^(){
+                chartView.chartFruitsWidth.constant = left;
+            }];
+            
+            NSLog(@"dairy updated to %f", value);
             break;
         }
         case FRUIT: {
             image = chartView.chartFruits;
+            [image setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+            NSLog(@"%f",value);
             right = chartView.chartFruits.frame.size.width * value;
-            NSLog(@"fruit updated to %d", value);
+            [UIView animateWithDuration:0.5 animations:^(){
+                chartView.chartFruitsWidth.constant = right;
+            }];
+            NSLog(@"fruit updated to %d", right);
             break;
         }
         case GRAIN: {
             image = chartView.chartGrains;
             bottom = chartView.chartGrains.frame.size.width * value;
-            NSLog(@"grain updated to %d", value);
+            NSLog(@"grain updated to %f", value);
             break;
         }
         case VEGITABLE: {
             image = chartView.chartVegitables;
             top = chartView.chartVegitables.frame.size.width * value;
-            NSLog(@"vegitable updated to %d", value);
+            NSLog(@"vegitable updated to %f", value);
             break;
         }
         case PROTEIN: {
             image = chartView.chartProtein;
             right = chartView.chartFruits.frame.size.width * value;
-            NSLog(@"protein updated to %d", value);
+            NSLog(@"protein updated to %f", value);
             break;
         }
         default: {
             NSLog(@"ERROR: Unknown food group.");
             break;
         }
-    }
-    CGRect cropRegion = CGRectMake(-left, -top, image.frame.size.height - right, image.frame.size.height - bottom);
-    CGImageRef subImage = CGImageCreateWithImageInRect(image.image.CGImage, cropRegion);
-    UIImage *croppedImage = [UIImage imageWithCGImage:subImage];
-    image.image = croppedImage;
-    /* [UIView animateWithDuration:3.0f
-                          delay:0.0f
-                        options:UIViewAnimationOptionCurveEaseIn
-                     animations:^(void) {
-                         image.frame = CGRectMake(image.frame.origin.x, image.frame.origin.y, image.frame.size.width, image.frame.size.height);
-                     }
-                     completion:NULL];*/
+    }    
 }
 
 @end

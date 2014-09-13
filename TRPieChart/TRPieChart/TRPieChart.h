@@ -11,10 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "TRPieChartView.h"
 
-@interface TRPieChart : NSObject
-@property (nonatomic, strong) UIView *view;
-
-typedef enum foodGroups : NSUInteger
+typedef enum foodGroups
 {
     DAIRY,
     FRUIT,
@@ -23,7 +20,10 @@ typedef enum foodGroups : NSUInteger
     PROTEIN
 } FoodGroup;
 
+@interface TRPieChart : NSObject
+@property (nonatomic, strong) UIView *view;
+
 - (id)initWithView:(UIView *)view;
-- (void)setValue:(int)value forFoodGroup:(FoodGroup)foodGroup;
+- (void)setValue:(double)value forFoodGroup:(int)foodGroup;
 
 @end

@@ -10,6 +10,8 @@
 	<string>TRPieChart</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>5584BD7ECC45D163FD8F3EA0E547B19D08F8104F</key>
+		<string>https://github.com/IsaiahJTurner/TRPieChart.git</string>
 		<key>F1F24458C3703E4A701EB11E4A986167CC39E4B6</key>
 		<string>https://github.com/sammoore/tranquility.git</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>TRPieChart/TRPieChart.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F1F24458C3703E4A701EB11E4A986167CC39E4B6</key>
+		<key>5584BD7ECC45D163FD8F3EA0E547B19D08F8104F</key>
 		<string>../../..</string>
+		<key>F1F24458C3703E4A701EB11E4A986167CC39E4B6</key>
+		<string>../../../../tranquility</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/sammoore/tranquility.git</string>
+	<string>https://github.com/IsaiahJTurner/TRPieChart.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F1F24458C3703E4A701EB11E4A986167CC39E4B6</string>
+	<string>5584BD7ECC45D163FD8F3EA0E547B19D08F8104F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>F1F24458C3703E4A701EB11E4A986167CC39E4B6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>tranquility</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5584BD7ECC45D163FD8F3EA0E547B19D08F8104F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TRPieChart</string>
 		</dict>
 	</array>
 </dict>

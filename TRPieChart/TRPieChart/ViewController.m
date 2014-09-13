@@ -19,7 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     TRPieChart *chart = [[TRPieChart alloc] initWithView:self.circleView];
-    [chart setValue:(int)0.5 forKey:PROTEIN];
+    [chart setValue:0.5 forFoodGroup:FRUIT];
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapGestureRecognizer:)];
+    [self.circleView addGestureRecognizer:singleTap];
+}
+
+- (void)singleTapGestureRecognizer:(UITapGestureRecognizer *)sender {
+    
 }
 
 - (void)didReceiveMemoryWarning {

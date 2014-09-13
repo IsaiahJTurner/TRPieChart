@@ -9,10 +9,24 @@
 #import <UIKit/UIKit.h>
 
 @interface TRPieChartView : UIView
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *chartFruitsWidth;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *chartDairyWidth;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *chartProteinWidth;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *chartGrainsHeight;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *chartVegitablesHeight;
+
+
 @property (strong, nonatomic) IBOutlet UIImageView *chartGrains;
 @property (strong, nonatomic) IBOutlet UIImageView *chartDairy;
 @property (strong, nonatomic) IBOutlet UIImageView *chartVegitables;
 @property (strong, nonatomic) IBOutlet UIImageView *chartFruits;
 @property (strong, nonatomic) IBOutlet UIImageView *chartProtein;
+@property (strong, nonatomic) IBOutletCollection(UILabel) NSArray *labels;
+
+@property (strong, nonatomic) IBOutlet UILabel *chartVegitablesLabel;
+@property (strong, nonatomic) IBOutlet UILabel *chartFruitLabel;
+@property (strong, nonatomic) IBOutlet UILabel *chartDairyLabel;
+@property (strong, nonatomic) IBOutlet UILabel *chartProteinLabel;
+@property (strong, nonatomic) IBOutlet UILabel *chartGrainLabel;
 
 @end

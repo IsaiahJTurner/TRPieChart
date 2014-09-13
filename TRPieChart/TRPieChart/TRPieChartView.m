@@ -9,5 +9,7 @@
 #import "TRPieChartView.h"
 
 @implementation TRPieChartView
+- (IBAction)tap:(UITapGestureRecognizer *)sender {
+}
 
 @end
