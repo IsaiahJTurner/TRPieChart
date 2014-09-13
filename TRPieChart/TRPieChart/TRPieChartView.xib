@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TRPieChartView">
+            <rect key="frame" x="0.0" y="0.0" width="1245" height="1290"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Grains" translatesAutoresizingMaskIntoConstraints="NO" id="ugM-qT-gBL">
+                    <rect key="frame" x="25" y="60" width="471" height="1072"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dairy" translatesAutoresizingMaskIntoConstraints="NO" id="Zas-4P-4VS">
+                    <rect key="frame" x="495" y="400" width="609" height="158"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vegitables" translatesAutoresizingMaskIntoConstraints="NO" id="h0c-Zn-Z6c">
+                    <rect key="frame" x="62" y="794" width="1006" height="343"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fruits" translatesAutoresizingMaskIntoConstraints="NO" id="bQw-J4-pCI">
+                    <rect key="frame" x="495" y="557" width="610" height="239"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Protein" translatesAutoresizingMaskIntoConstraints="NO" id="lhG-7U-VIi">
+                    <rect key="frame" x="495" y="56" width="575" height="345"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="chartDairy" destination="Zas-4P-4VS" id="9HJ-Tg-6iQ"/>
+                <outlet property="chartFruits" destination="bQw-J4-pCI" id="7cs-40-Otc"/>
+                <outlet property="chartGrains" destination="ugM-qT-gBL" id="2zG-xC-BzW"/>
+                <outlet property="chartProtein" destination="lhG-7U-VIi" id="eEu-wu-74B"/>
+                <outlet property="chartVegitables" destination="h0c-Zn-Z6c" id="BYf-eo-1wf"/>
+            </connections>
+            <point key="canvasLocation" x="373.5" y="428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Dairy" width="608" height="158"/>
+        <image name="Fruits" width="609" height="239"/>
+        <image name="Grains" width="471" height="1072"/>
+        <image name="Protein" width="573" height="345"/>
+        <image name="Vegitables" width="1006" height="343"/>
+    </resources>
+</document>
